@@ -6,6 +6,16 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-ensure-login": "^0.1.1",
+    "express": "^4.15.3",
+    "express-jwt": "^5.3.0",
+    "express-jwt-authz": "^1.0.0",
+    "express-session": "^1.15.3",
+    "jwks-rsa": "^1.1.1",
+    "passport": "^0.3.2",
+    "passport-auth0": "^0.6.0",
+    "path": "^0.12.7",
     "react": "15.4.2",
     "react-native": "0.41.2",
     "react-native-lock": "^0.5.0"

@@ -43,7 +43,22 @@ var WelcomeView = React.createClass({
         console.log(err);
         return;
       }
-      console.log("success",token);
+      console.log(profile,JSON.stringify(token));
+      fetch('http://localhost:8080/hello', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer '+token.idToken
+  }
+}).then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson);
+        return responseJson;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+
       this.props.navigator.push({
         name: 'Profile',
         passProps: {
